@@ -53,4 +53,11 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+  i18n: {
+    defaultLocale: "ja",
+    locales: ["en", "ja"],
+    routing: {
+      prefixDefaultLocale: false
+    },
+  }
 });

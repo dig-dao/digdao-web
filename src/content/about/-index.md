@@ -1,9 +1,35 @@
 ---
-title: "Hey, I am John Doe!"
+title: "Dig DAO について"
 meta_title: "About"
-description: "this is meta description"
-image: "/images/avatar.png"
+description: "Dig DAO について"
+image: "/images/diggy.png"
+lang: ja-JP
 draft: false
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+Dig DAO は、デジタル庁のWeb3.0 研究会 をきっかけに生まれたDAOで、web3 についての研究開発を行うコミュニティです。
+
+## 目標・ビジョン
+
+社会の健全な発展に活用されるためのWeb3.0のエコシステムや整備すべき環境について議論・研究・実践し、公開していくことを目的とする。
+
+## 活動内容
+
+活動は Discord が中心です。Github もあります。https://github.com/Dig-DAO
+週1回、金曜日 11:00〜12:00 に定例ミーティングを行っています。
+メンバーはプロジェクトを立ち上げたり、参加をすることが可能です。今は、以下のようなプロジェクトが活動しています。
+
+### DID/VC SBT プロジェクト
+
+- 国に依存しない相互運用性を可能にしたVerfiable Credentialのモデル実装
+- 各国政府等が参照可能なOSSの提供
+
+### DAO リサーチプロジェクト
+
+- 国内外の DAO についての調査研究とレポート
+
+## デジタル公共資本基金
+
+- デジタル公共財の創出: デジタル社会を豊かにするため、新しい公共財を生み出す支援を行う。
+- 貢献者を増やす: デジタル公共財への貢献者が、適切な報酬や評価を受けられるような環境を作る。
+- 適切なデジタル公共財投資の配分手法を作る：デジタル公共財を支援する人たちが投資配分の意思決定に参加し、社会により高い価値を提供する公共財に対してより多くの分配がされる仕組みを作る。

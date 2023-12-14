@@ -30,7 +30,7 @@ const { banner, features }: Homepage = homepage.data;
     <div class="container">
       <div class="row justify-center">
         <div class="mb-16 text-center lg:col-7">
-          <h1 set:html={markdownify(banner.title)} class="mb-4" />
+          <h1 set:html={markdownify(banner.title)} class="mb-4 h2" />
           <p set:html={markdownify(banner.content)} class="mb-8" />
           {
             banner.button.enable && (
@@ -79,7 +79,7 @@ const { banner, features }: Homepage = homepage.data;
               <h2 set:html={markdownify(feature.title)} class="mb-4" />
               <p set:html={markdownify(feature.content)} class="mb-8 text-lg" />
               <ul>
-                {feature.bulletpoints.map((bullet: string) => (
+                {feature.bulletpoints && feature.bulletpoints.map((bullet: string) => (
                   <li class="relative mb-4 pl-6">
                     <FaCheck className={"absolute left-0 top-1.5"} />
                     <span set:html={markdownify(bullet)} />
