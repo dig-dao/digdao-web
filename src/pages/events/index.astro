@@ -1,0 +1,21 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getEntry } from "astro:content";
+
+const PROJECT_FOLDER = "projects";
+
+const projectIndex = await getEntry(PROJECT_FOLDER, "-index");
+const projects = await getSinglePage(PROJECT_FOLDER);
+
+---
+
+<Base title={"Events"}>
+  <PageHeader title={"Events"} />
+  <section class="section">
+    <div class="container text-center">
+          Coming soon!
+    </div>
+  </section>
+</Base>

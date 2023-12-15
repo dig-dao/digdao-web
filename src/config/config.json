@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Dig DAO",
-    "base_url": "https://digdao.jp/",
+    "base_url": "https://www.digdao.jp/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
