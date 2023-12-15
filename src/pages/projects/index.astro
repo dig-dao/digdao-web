@@ -1,0 +1,35 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getEntry } from "astro:content";
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const PROJECT_FOLDER = "projects";
+
+const projectIndex = await getEntry(PROJECT_FOLDER, "-index");
+const projects = await getSinglePage(PROJECT_FOLDER);
+
+---
+
+<Base title={"Projects"}>
+  <PageHeader title={"Projects"} />
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <!-- projects -->
+        <div class="lg:col-8">
+          <div class="row">
+            {
+              projects.map((post) => (
+                <div class="mb-14 md:col-6">
+                  <ProjectCard data={post} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
