@@ -26,9 +26,9 @@
     "copyright": "Created by Dig DAO"
   },
   "navigation_button": {
-    "enable": false,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/astroplate"
+    "enable": true,
+    "label": "Contact US",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSfUPRg_nMWMiKlwvWfmKD8Wgq_hpJX6bxvnvtq8kkdl5kxVTA/viewform"
   },
   "disqus": {
     "enable": false,
