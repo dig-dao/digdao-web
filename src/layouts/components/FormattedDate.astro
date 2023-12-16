@@ -10,12 +10,13 @@ console.log(date);
 
 <time datetime={date.toISOString()}>
   {
-    date.toLocaleDateString("ja", {
+    date.toLocaleDateString("ja-JP", {
       year: "numeric",
       month: "short",
       day: "numeric",
       hour: enableTime ? "numeric" : undefined,
       minute: enableTime ? "numeric" : undefined,
+      timeZone: "Asia/Tokyo",
     })
   }
 </time>
