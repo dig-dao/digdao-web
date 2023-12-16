@@ -3,19 +3,32 @@ import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { getEntry } from "astro:content";
+import EventCard from "@/components/EventCard.astro";
 
-const PROJECT_FOLDER = "projects";
+const EVENT_FOLDER = "events";
 
-const projectIndex = await getEntry(PROJECT_FOLDER, "-index");
-const projects = await getSinglePage(PROJECT_FOLDER);
+const events = await getSinglePage(EVENT_FOLDER);
 
 ---
 
 <Base title={"Events"}>
   <PageHeader title={"Events"} />
   <section class="section">
-    <div class="container text-center">
-          Coming soon!
+    <div class="container">
+      <div class="row gx-5">
+        <!-- blog posts -->
+        <div class="lg:col-8">
+          <div class="row">
+            {
+              events.map((event) => (
+                <div class="mb-14 md:col-6">
+                  <EventCard data={event} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Base>

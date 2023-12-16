@@ -19,7 +19,8 @@
     "pagination": 2,
     "summary_length": 200,
     "blog_folder": "blog",
-    "project_folder": "projects"
+    "project_folder": "projects",
+    "event_folder": "events"
   },
   "params": {
     "contact_form_action": "#",

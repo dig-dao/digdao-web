@@ -50,9 +50,22 @@ const pagesCollection = defineCollection({
   }),
 });
 
+// Event collection schema
+const eventCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    url: z.string(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+    draft: z.boolean().optional(),
+  }),
+});
+
 // Export collections
 export const collections = {
   blog: blogCollection,
   authors: authorsCollection,
   pages: pagesCollection,
+  events: eventCollection,
 };
