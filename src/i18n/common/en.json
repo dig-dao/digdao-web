@@ -1,6 +1,6 @@
 {
-	"your_common": "translations here",
+	"your_common": "コモン",
 	"they": {
-		"can": "be nested"
+		"can": "できる"
 	}
 }

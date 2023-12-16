@@ -1,9 +1,9 @@
 import { defineAstroI18nConfig } from "astro-i18n"
 
 export default defineAstroI18nConfig({
-	primaryLocale: "ja-JP", // default app locale
+	primaryLocale: "ja", // default app locale
 	secondaryLocales: ['en'], // other supported locales
-	fallbackLocale: "ja-JP", // fallback locale (on missing translation)
+	fallbackLocale: "ja", // fallback locale (on missing translation)
 	trailingSlash: "never", // "never" or "always"
 	run: "client+server", // "client+server" or "server"
 	showPrimaryLocale: false, // "/en/about" vs "/about"

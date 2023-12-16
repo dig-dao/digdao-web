@@ -1,0 +1,13 @@
+---
+import { astroI18n } from "astro-i18n";
+---
+
+<ul>
+  {
+    Object.entries(astroI18n.locales).map(([id, lang]) => (
+      <li>
+        <a href={`/${lang !== astroI18n.primaryLocale ? lang : ""}`}>{lang}</a>
+      </li>
+    ))
+  }
+</ul>
