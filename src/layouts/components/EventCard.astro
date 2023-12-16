@@ -3,45 +3,52 @@ import config from "@/config/config.json";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
+import FormattedDate from "./FormattedDate.astro";
 
 const {
   summary_length,
   event_folder,
 }: { summary_length: number; event_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image, date: Date } = data.data;
+const { title, image, date, endtime, url } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
   <div class="md:flex md:flex-row">
-      <div>
-  {
-    image && (
-      <Image
-        class="mb-6 w-full rounded"
-        src={image}
-        alt={title}
-        width={445}
-        height={230}
-        format="webp"
-      />
-    )
-  }
-      </div>
-      <div class="mx-8 my-4">
-
-        <h4 class="mb-3">
-          <a href={`/${event_folder}/${data.slug}`}>
-            {title}
-          </a>
-        </h4>
-        <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
-        <a
-          class="btn btn-outline-primary btn-sm"
-          href={`/${event_folder}/${data.slug}`}
-        >
-          read more
-        </a>
+    <div>
+      <a href={url} target="_blank">
+        {
+          image && (
+            <Image
+              class="mb-6 w-full rounded"
+              src={image}
+              alt={title}
+              width={445}
+              height={230}
+              format="webp"
+            />
+          )
+        }</a
+      >
+    </div>
+    <div class="mx-8 my-4">
+      <span class="text-lg font-bold">
+        <FormattedDate date={date} enableTime={true} />
+        {
+          endtime && (
+            <>
+              〜<FormattedDate date={endtime} enableTime={true} />
+            </>
+          )
+        }</span
+      >
+      <h4 class="mb-3">
+        {title}
+      </h4>
+      <p class="mb-6">
+        {plainify(data.body?.slice(0, Number(summary_length)))}
+      </p>
+      <a class="btn btn-primary btn-sm" href={url} target="_blank"> 参加する</a>
     </div>
   </div>
 </div>

@@ -1,14 +1,11 @@
 ---
-title: "DigDAO 2023 忘年会"
-description: "一緒に今年を振り返り返り、2024年のweb3/DAOを迎える準備をしよう!"
-date: 2023-12-26T18:30:00+09:00
-url: "https://lu.ma/zjbfz1ik"
-image: "/images/party.png"
+title: "Dig DAOオープン勉強会 Vol.2"
+description: "Verifiable Credentials の相互運用性を確保するためのオープンソースツールを開発"
+date: 2023-12-15T11:00:00+09:00
+endtime: 2023-12-15T12:00:00+09:00
+url: "https://www.youtube.com/watch?v=8bfpgfugQ5c"
+image: "/images/events/open-verifier.jpeg"
 draft: false
 ---
 
-Crypto Cafe & BarのOne night ticket (2,000円) + Bring your own food.
-cryptocafe.bar で2000円Barチケット＋自分のお気に入りのフードを持ち寄りにしよう。自分の食べる分プラス数名分が食べられるぐらいの量を持ち込んでください。
-
-Buy a bar time membership at cryptocafe.bar, and bring your food! If possible, bring enough for yourself plus enough for about two more people to enjoy."
-
+Verifiable Credentials の発行者間での相互運用性を確保するためのオープンソースツールを開発。開発で苦労したこと、ロードマップをお話しします。

@@ -16,17 +16,16 @@ console.log(sortedEvents);
   <PageHeader title={"Events"} />
   <section class="section">
     <div class="container">
-        <!-- blog posts -->
-            {
-              sortedEvents.filter((event) => {
-                const eventDate = event.data.date;
-                const currentDate = new Date();
-                console.log(eventDate, currentDate)
-                return eventDate > currentDate;
-              }).map((event) => (
-                  <EventCard data={event} />
-              ))
-            }
+      <!-- blog posts -->
+      {
+        sortedEvents
+          .filter((event) => {
+            const eventDate = event.data.date;
+            const currentDate = new Date();
+            return eventDate > currentDate;
+          })
+          .map((event) => <EventCard data={event} />)
+      }
     </div>
   </section>
 </Base>

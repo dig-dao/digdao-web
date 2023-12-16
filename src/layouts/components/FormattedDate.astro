@@ -1,9 +1,10 @@
 ---
 interface Props {
 	date: Date;
+  enableTime?: boolean;
 }
 
-const { date } = Astro.props;
+const { date, enableTime } = Astro.props;
 ---
 
 <time datetime={date.toISOString()}>
@@ -12,6 +13,8 @@ const { date } = Astro.props;
 			year: 'numeric',
 			month: 'short',
 			day: 'numeric',
+      hour: enableTime ? 'numeric' : undefined,
+      minute: enableTime ? 'numeric' : undefined,
 		})
 	}
 </time>
