@@ -1,20 +1,21 @@
 ---
 interface Props {
-	date: Date;
+  date: Date;
   enableTime?: boolean;
 }
 
 const { date, enableTime } = Astro.props;
+console.log(date);
 ---
 
 <time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('ja-JP', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-      hour: enableTime ? 'numeric' : undefined,
-      minute: enableTime ? 'numeric' : undefined,
-		})
-	}
+  {
+    date.toLocaleDateString("ja-JP", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: enableTime ? "numeric" : undefined,
+      minute: enableTime ? "numeric" : undefined,
+    })
+  }
 </time>
