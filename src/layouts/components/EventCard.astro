@@ -13,6 +13,8 @@ const { title, image, date: Date } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
+  <div class="md:flex md:flex-row">
+      <div>
   {
     image && (
       <Image
@@ -25,16 +27,21 @@ const { title, image, date: Date } = data.data;
       />
     )
   }
-  <h4 class="mb-3">
-    <a href={`/${event_folder}/${data.slug}`}>
-      {title}
-    </a>
-  </h4>
-  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
-  <a
-    class="btn btn-outline-primary btn-sm"
-    href={`/${event_folder}/${data.slug}`}
-  >
-    read more
-  </a>
+      </div>
+      <div class="mx-8 my-4">
+
+        <h4 class="mb-3">
+          <a href={`/${event_folder}/${data.slug}`}>
+            {title}
+          </a>
+        </h4>
+        <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
+        <a
+          class="btn btn-outline-primary btn-sm"
+          href={`/${event_folder}/${data.slug}`}
+        >
+          read more
+        </a>
+    </div>
+  </div>
 </div>

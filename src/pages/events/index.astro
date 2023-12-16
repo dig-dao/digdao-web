@@ -2,33 +2,31 @@
 import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import { getEntry } from "astro:content";
 import EventCard from "@/components/EventCard.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
 
 const EVENT_FOLDER = "events";
 
 const events = await getSinglePage(EVENT_FOLDER);
-
+const sortedEvents = sortByDate(events);
+console.log(sortedEvents);
 ---
 
 <Base title={"Events"}>
   <PageHeader title={"Events"} />
   <section class="section">
     <div class="container">
-      <div class="row gx-5">
         <!-- blog posts -->
-        <div class="lg:col-8">
-          <div class="row">
             {
-              events.map((event) => (
-                <div class="mb-14 md:col-6">
+              sortedEvents.filter((event) => {
+                const eventDate = event.data.date;
+                const currentDate = new Date();
+                console.log(eventDate, currentDate)
+                return eventDate > currentDate;
+              }).map((event) => (
                   <EventCard data={event} />
-                </div>
               ))
             }
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </Base>
