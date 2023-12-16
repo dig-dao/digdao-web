@@ -27,12 +27,17 @@ concurrency:
 env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
+  LANG: "ja_JP.UTF-8"
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: ja_JP.UTF-8
+        run: |
+          sudo locale-gen ja_JP.UTF-8
+          sudo update-locale LANG=ja_JP.UTF-8
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
