@@ -9,13 +9,13 @@ const {
   summary_length,
   event_folder,
 }: { summary_length: number; event_folder: string } = config.settings;
-const { data } = Astro.props;
+const { data, btnText } = Astro.props;
 const { title, image, date, endtime, url } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
   <div class="md:flex md:flex-row">
-    <div>
+    <div class="max-w-md">
       <a href={url} target="_blank">
         {
           image && (
@@ -23,8 +23,8 @@ const { title, image, date, endtime, url } = data.data;
               class="mb-6 w-full rounded"
               src={image}
               alt={title}
-              width={445}
-              height={230}
+              width={300}
+              height={300}
               format="webp"
             />
           )
@@ -48,7 +48,9 @@ const { title, image, date, endtime, url } = data.data;
       <p class="mb-6">
         {plainify(data.body?.slice(0, Number(summary_length)))}
       </p>
-      <a class="btn btn-primary btn-sm" href={url} target="_blank"> 参加する</a>
+      <a class="btn btn-primary btn-sm" href={url} target="_blank"
+        >{btnText ? btnText : "参加する"}</a
+      >
     </div>
   </div>
 </div>
