@@ -12,7 +12,7 @@
     "logo_text": "Dig DAO"
   },
   "settings": {
-    "search": true,
+    "search": false,
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
@@ -36,8 +36,8 @@
     "settings": {}
   },
   "metadata": {
-    "meta_author": "zeon.studio",
+    "meta_author": "Hal Seki",
     "meta_image": "/images/og-image.png",
-    "meta_description": "astro and tailwind boilerplate"
+    "meta_description": "Dig DAO: web3 リサーチコミュニティ"
   }
 }
