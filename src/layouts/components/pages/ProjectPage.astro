@@ -1,0 +1,38 @@
+---
+import { astroI18n } from "astro-i18n";
+
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const PROJECT_FOLDER = "projects";
+const projects = await getSinglePage(PROJECT_FOLDER);
+console.log(projects);
+---
+
+<Base title={"Projects"}>
+  <PageHeader title={"Projects"} />
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <!-- projects -->
+        <div class="lg:col-8">
+          <div class="row">
+            {
+              projects
+                .filter((project) => {
+                  return project.data.lang === astroI18n.locale;
+                })
+                .map((post) => (
+                  <div class="mb-14 md:col-6">
+                    <ProjectCard data={post} />
+                  </div>
+                ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
