@@ -2,24 +2,8 @@
 import { astroI18n } from "astro-i18n";
 ---
 
-<script>
-  import { l } from "astro-i18n";
-  const switchLang = (e: any) => {
-    console.log("switching lang to ", e.target.value);
-    window.location.href = l(
-      window.location.pathname,
-      {},
-      { targetLocale: e.target.value },
-    );
-  };
-  const selector = document.querySelector(
-    "#language-switcher",
-  ) as HTMLSelectElement;
-  console.log("add event listener to ", selector);
-  selector.addEventListener("change", switchLang);
-</script>
 <label for="language-switcher">Language</label>
-<select id="language-switcher" class="ml-2">
+<select id="language-switcher" class="ml-2" onchange="switchLang()">
   {
     Object.entries(astroI18n.locales).map(([id, lang]) => (
       <option value={lang} selected={lang === astroI18n.locale}>
@@ -28,3 +12,19 @@ import { astroI18n } from "astro-i18n";
     ))
   }
 </select>
+<script is:inline>
+  console.log("loaded language switcher");
+  const localePath = (path, locale) => {
+    const prefix = locale === "ja" ? "" : `/${locale}`;
+    if (path.split("/")[1] === "en") {
+      return prefix + "/" + path.split("/").slice(2).join("/");
+    } else {
+      if (path === "/") return prefix;
+      return prefix + path;
+    }
+  };
+  const switchLang = () => {
+    const lang = document.querySelector("#language-switcher").value;
+    window.location.href = localePath(window.location.pathname, lang);
+  };
+</script>
