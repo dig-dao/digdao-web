@@ -27,7 +27,7 @@ const langPrefix =
 ---
 
 <header class={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
-  <nav class="navbar container">
+  <nav class="navbar container flex flex-row">
     <!-- logo -->
     <div class="order-0">
       <Logo />
@@ -52,7 +52,7 @@ const langPrefix =
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+      class="navbar-nav grow order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:ml-20 lg:justify-around lg:w-auto lg:space-x-4 lg:pb-0 xl:space-x-8"
     >
       {
         main.map((menu) => (
@@ -111,6 +111,9 @@ const langPrefix =
           </>
         ))
       }
+      <li class="ml-4 lang-switcher">
+        <LanguageSwitcher />
+      </li>
       {
         navigation_button.enable && (
           <li class="mt-4 inline-block lg:hidden">
@@ -137,7 +140,6 @@ const langPrefix =
         )
       }
       <ThemeSwitcher className="mr-5" />
-      <LanguageSwitcher />
       {
         navigation_button.enable && (
           <a

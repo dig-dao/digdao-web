@@ -19,7 +19,7 @@ import { astroI18n } from "astro-i18n";
   selector.addEventListener("change", switchLang);
 </script>
 <label for="language-switcher">Language</label>
-<select id="language-switcher">
+<select id="language-switcher" class="ml-2">
   {
     Object.entries(astroI18n.locales).map(([id, lang]) => (
       <option value={lang} selected={lang === astroI18n.locale}>

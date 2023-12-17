@@ -39,6 +39,14 @@ input#nav-toggle:checked ~ #nav-menu {
   @apply block p-3 font-semibold text-dark transition hover:text-primary dark:text-darkmode-dark lg:px-2 lg:py-3;
 }
 
+.lang-switcher {
+  @apply block p-1 text-dark transition hover:text-primary dark:text-darkmode-dark lg:px-6 lg:py-1;
+  select {
+    @apply bg-transparent;
+    @apply rounded;
+  }
+}
+
 .nav-dropdown {
   @apply mr-0;
 }
