@@ -12,7 +12,8 @@ export async function getStaticPaths() {
     })
     .map((post) => ({
       params: {
-        single: post.slug.split("/")[1],
+        single:
+          post.slug.split("/").length > 1 ? post.slug.split("/")[1] : post.slug,
       },
       props: { post },
     }));
