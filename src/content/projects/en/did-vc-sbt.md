@@ -1,8 +1,8 @@
 ---
-title: "DID/VC SBT プロジェクト"
+title: "DID/VC SBT Project"
 meta_title: ""
-lang: "ja"
-description: "DID や VC などの相互運用性を向上する"
+lang: "en"
+description: "Improve interoperability of DIDs, VCs, etc."
 date: 2022-04-04T05:00:00Z
 image: ""
 author: "Hal Seki"

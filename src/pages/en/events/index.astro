@@ -1,0 +1,42 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import EventCard from "@/components/EventCard.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+
+const EVENT_FOLDER = "events";
+
+const events = await getSinglePage(EVENT_FOLDER);
+const sortedEvents = sortByDate(events);
+---
+
+<Base title={"Events"}>
+  <PageHeader title={"Events"} />
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 mb-2">Upcoming Events</h2>
+      <!-- blog posts -->
+      {
+        sortedEvents
+          .filter((event) => {
+            const eventDate = event.data.date;
+            const currentDate = new Date();
+            return eventDate > currentDate;
+          })
+          .map((event) => <EventCard data={event} />)
+      }
+      <h2 class="title is-2 mt-4 mb-2">Past Events</h2>
+      <!-- blog posts -->
+      {
+        sortedEvents
+          .filter((event) => {
+            const eventDate = event.data.date;
+            const currentDate = new Date();
+            return eventDate < currentDate;
+          })
+          .map((event) => <EventCard data={event} btnText="閲覧する" />)
+      }
+    </div>
+  </section>
+</Base>

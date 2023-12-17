@@ -8,11 +8,11 @@ export async function getStaticPaths() {
   const posts = await getSinglePage(PROJECT_FOLDER);
   const paths = posts
     .filter((post) => {
-      return post.data.lang === "ja";
+      return post.data.lang === "en";
     })
     .map((post) => ({
       params: {
-        single: post.slug,
+        single: post.slug.split("/")[1],
       },
       props: { post },
     }));

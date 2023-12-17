@@ -9,7 +9,13 @@ const {
   project_folder,
 }: { summary_length: number; project_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image,description } = data.data;
+const { title, image, description } = data.data;
+let lang = "";
+if (data.slug.split("/").length > 1) {
+  lang = "/" + data.slug.split("/")[0];
+  data.slug = data.slug.split("/")[1];
+}
+const path = `${lang}/${project_folder}/${data.slug}`;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
@@ -26,15 +32,10 @@ const { title, image,description } = data.data;
     )
   }
   <h4 class="mb-3">
-    <a href={`/${project_folder}/${data.slug}`}>
+    <a href={path}>
       {title}
     </a>
   </h4>
   <p class="mb-6">{plainify(description)}</p>
-  <a
-    class="btn btn-outline-primary btn-sm"
-    href={`/${project_folder}/${data.slug}`}
-  >
-    read more
-  </a>
+  <a class="btn btn-outline-primary btn-sm" href={path}> read more</a>
 </div>
