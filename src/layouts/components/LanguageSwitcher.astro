@@ -1,0 +1,30 @@
+---
+import { astroI18n } from "astro-i18n";
+---
+
+<script>
+  import { l } from "astro-i18n";
+  const switchLang = (e: any) => {
+    console.log("switching lang to ", e.target.value);
+    window.location.href = l(
+      window.location.pathname,
+      {},
+      { targetLocale: e.target.value },
+    );
+  };
+  const selector = document.querySelector(
+    "#language-switcher",
+  ) as HTMLSelectElement;
+  console.log("add event listener to ", selector);
+  selector.addEventListener("change", switchLang);
+</script>
+<label for="language-switcher">Language</label>
+<select id="language-switcher" class="ml-2">
+  {
+    Object.entries(astroI18n.locales).map(([id, lang]) => (
+      <option value={lang} selected={lang === astroI18n.locale}>
+        {lang}
+      </option>
+    ))
+  }
+</select>

@@ -1,4 +1,6 @@
 ---
+import { astroI18n } from "astro-i18n";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 import Logo from "@/components/Logo.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
@@ -20,10 +22,12 @@ export interface NavigationLink {
 const { main }: { main: NavigationLink[] } = menu;
 const { navigation_button, settings } = config;
 const { pathname } = Astro.url;
+const langPrefix =
+  astroI18n.locale === astroI18n.primaryLocale ? "" : `/${astroI18n.locale}`;
 ---
 
 <header class={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
-  <nav class="navbar container">
+  <nav class="navbar container flex flex-row">
     <!-- logo -->
     <div class="order-0">
       <Logo />
@@ -48,7 +52,7 @@ const { pathname } = Astro.url;
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+      class="navbar-nav grow order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:ml-20 lg:justify-around lg:w-auto lg:space-x-4 lg:pb-0 xl:space-x-8"
     >
       {
         main.map((menu) => (
@@ -74,7 +78,7 @@ const { pathname } = Astro.url;
                   {menu.children?.map((child) => (
                     <li class="nav-dropdown-item">
                       <a
-                        href={child.url}
+                        href={`${langPrefix}${child.url}`}
                         class={`nav-dropdown-link block ${
                           (pathname === `${child.url}/` ||
                             pathname === child.url) &&
@@ -90,7 +94,11 @@ const { pathname } = Astro.url;
             ) : (
               <li class="nav-item">
                 <a
-                  href={menu.url}
+                  href={
+                    menu.url === "/" && langPrefix !== ""
+                      ? langPrefix
+                      : `${langPrefix}${menu.url}`
+                  }
                   class={`nav-link block ${
                     (pathname === `${menu.url}/` || pathname === menu.url) &&
                     "active"
@@ -103,6 +111,9 @@ const { pathname } = Astro.url;
           </>
         ))
       }
+      <li class="ml-4 lang-switcher">
+        <LanguageSwitcher />
+      </li>
       {
         navigation_button.enable && (
           <li class="mt-4 inline-block lg:hidden">

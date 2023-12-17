@@ -25,7 +25,7 @@ features:
     bulletpoints:
       - "DID/VC SBT プロジェクト"
       - "DAO リサーチプロジェクト"
-      - "デジタル公共資本基金"
+      - "デジタル公共材のサポート環境づくり"
     button:
       enable: false
       label: "Get Started Now"
