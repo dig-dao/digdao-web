@@ -95,4 +95,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed. \n {{EVENT_PAYLOAD.pull_request.title}} \n see https://www.digdao.jp/ "
+          args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed. \n see https://www.digdao.jp/ "
