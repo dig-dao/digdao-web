@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Dig DAO: web3 Research Community"
-  content: "社会の健全な発展に活用されるためのWeb3.0のエコシステムや整備すべき環境について議論・研究・実践し、公開していくことを目的に活動しています。"
+  content: "The purpose of our activities is to discuss, research, practice, and disclose the ecosystem of Web 3.0 and the environment that should be maintained in order for it to be used for the healthy development of society."
   image: "/images/banner.png"
   button:
     enable: false
@@ -11,21 +11,21 @@ banner:
 
 # Features
 features:
-  - title: "Dig DAO とは"
+  - title: "Who we are"
     image: "/images/digdao-photo.jpg"
-    content: "Dig DAO は、デジタル庁のWeb3.0 研究会 をきっかけに生まれたDAOで、web3 についての研究開発を行うコミュニティです。"
+    content: "Dig DAO is a community for research and development of web3, which was born out of the Digital Agency's Web3.0 Study Group."
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
-  - title: "プロジェクト"
+  - title: "Projects"
     image: "/images/verifier.png"
-    content: "Dig DAO は、web3 の発展に関係する様々なリサーチや開発を行っています。"
+    content: "We organize a variety of research and development related to the development of web3."
     bulletpoints:
-      - "DID/VC SBT プロジェクト"
-      - "DAO リサーチプロジェクト"
-      - "デジタル公共資本基金"
+      - "DID/VC SBT project"
+      - "DAO research project"
+      - "Supporting digital public goods"
     button:
       enable: false
       label: "Get Started Now"

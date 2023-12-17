@@ -24,7 +24,10 @@ interface Homepage {
 const homepage = await getEntry("homepage", `-index-${astroI18n.locale}`);
 
 const testimonial = await getEntry("sections", "testimonial");
-const call_to_action = await getEntry("sections", "call-to-action");
+const call_to_action = await getEntry(
+  "sections",
+  `call-to-action-${astroI18n.locale}`,
+);
 const { banner, features }: Homepage = homepage!.data;
 ---
 
