@@ -1,6 +1,6 @@
 # Dig DAO website
 
-This project is for content management for the [Dig DAO website](https://digdao.jp/).
+This project is the content management for the [Dig DAO website](https://digdao.jp/).
 
 This code base is based on [Astro](https://astro.build/), which is a web framework for content-driven websites using Reactjs.
 
