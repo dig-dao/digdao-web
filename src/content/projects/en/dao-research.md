@@ -14,8 +14,9 @@ draft: false
 - Conduct and present research on DAOs in Japan and abroad
 - Publish our own trials and errors in setting up our own DAOs
 
-### How we start (Japanese Article)
-[Dig DAO (a.k.a. デジタル庁スピンオフweb3研究会DAO) とそのビジョン：私たちの旅と目指す未来](https://note.com/mariroom/n/nd123a8a18611?magazine_key=mf0d1255ff300)
+### How we start
+
+[Dig DAO (a.k.a. Japanese Digital Agency spin-off web3 Study Group DAO) : Our journey and the future](https://digdao.substack.com/p/dig-dao-aka-japanese-digital-agency)
 
 ## Activities
 
