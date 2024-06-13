@@ -26,7 +26,7 @@ draft: false
 
 As an owner wallet for smart contracts to be released by Dig DAO in the future, and eventually as a wallet owned by the DAO for treasury management, instead of using multisig wallets like Gnosis Safe, we aim to create a system where the private keys are held in a self-custodial manner, while decentralizing the management, and making it usable within commonly used tools in the DAO.
 
-### Open Credential Verifier: Verifiable Credentials の相互運用性を高める
+### Open Credential Verifier: Increase Interoperability of Verifiable Credentials
 
 ![Open Credential Verifier 概要](/images/open-verifier-image.jpg)
 

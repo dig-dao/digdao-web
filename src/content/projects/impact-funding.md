@@ -16,7 +16,7 @@ draft: false
 ## Roadmap
 
 - Gitcoinの寄付ラウンドに参加: 完了
-- QFを活用した公共財への資金提供のためのツール開発: 検討中
+- Quadratic Fundingを活用した公共財への資金提供のためのツール開発: 検討中
 
 ## Sub Project
 

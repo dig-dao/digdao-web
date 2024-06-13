@@ -16,7 +16,7 @@ draft: false
 ## Roadmap
 
 - Participation in Gitcoin's donation round: Completed
-- Development of tools for funding public goods using QF (Quadratic Funding): Under consideration
+- Development of tools for funding public goods using Quadratic Funding: Under consideration
 
 ## Sub Project
 
