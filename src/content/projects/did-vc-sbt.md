@@ -17,8 +17,8 @@ draft: false
 ## Roadmap
 
 - 秘密分散ウォレット: 完了
-- 本DAOメンバーに対してVerifiable Credentialの配布: 検討中
-- 具体的な外部プロジェクトへの適応  
+- DAOメンバーに対してVerifiable Credentialの配布: 完了
+- 具体的な外部プロジェクトへの適応: 検討中
 
 ## Sub Project
 
