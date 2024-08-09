@@ -9,15 +9,23 @@ author: "taka"
 draft: false
 ---
 
+> **アップデート**
+>
+>> 2024/08/09: 第一回目の実験結果の詳細レポートが公開されました！
+>>- [DigDAOマッチングドネーション #1: 結果と今後について](https://note.com/tkgshn/n/nfa5142139665)
+>>
+>> 2024/07/13: 共同開発しているCode for Japanからのプレスリリースが公開されました！
+>>-  [Code for Japan、シビックテックのエコシステム促進のために、Quadratic Fundingを使った助成金分配の実験を開始](https://prtimes.jp/main/html/rd/p/000000067.000039198.html)
+
+
+[![Image from Gyazo](https://i.gyazo.com/40f00438c86cfe8c5d2d83c88c520d69.png)](https://gyazo.com/40f00438c86cfe8c5d2d83c88c520d69)
+
 「DigDAO マッチングドネーション」は、Code for Japanと共同運営している公共財に対する資金分配の新たなモデルを模索するプロジェクトです。
 
 - **https://donation.digdao.jp**
 
 このプロジェクトを通して、Quadratic Funding（QF）という分配メカニズムを実験し、ユーザーによる支持（寄付）を元に各Civictechプロジェクトに対して資金を分配します。
 
-*2024/07/13 追記: 共同開発しているCode for Japanからのプレスリリースが公開されました！*
-
-- [Code for Japan、シビックテックのエコシステム促進のために、Quadratic Fundingを使った助成金分配の実験を開始](https://prtimes.jp/main/html/rd/p/000000067.000039198.html)
 
 ## 公共財への資金分配に対してDigDAOが取り組むこと
 DigDAOは2023年、デジタル庁Web3リサーチコミュニティからスピンアウトし、Ethereumエコシステムで起こっている実験から何か行政府の変革により良い仕組みを実験・実装することを目的としています。
