@@ -1,7 +1,7 @@
 ---
 title: "Impact Funding Project"
 meta_title: ""
-lang: "ja"
+lang: "en"
 description: "Supporting digital public goods"
 date: 2024-06-09T05:00:00Z
 image: ""
